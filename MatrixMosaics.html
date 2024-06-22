@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Matrix Mosaics</title>
+</head>
+<body onload="createInputArea()">
+    <div id="inputContainer">
+        <div id="matrixInput" class="divSect">
+            <h2>Create your Matrix</h2>
+            <div id="dimensionInput">
+                <input type="number" min="1" max="10" id="rowCount" oninput="createInputArea()" />
+                <input type="number" min="1" max="10" id="colCount" oninput="createInputArea()" />
+            </div>
+            <div><p>Max Matrix Size: 10x10</p></div>
+            <div id="inputGridWrapper"> <div id="inputGrid"> </div> </div>
+            <button class="button" id="random" onclick="randomMatrix()" onmouseover="showInfo(id)">Randomize Matrix</button>
+            <button class="button" id="invert" onclick="invertMatrix()" onmouseover="showInfo(id)">Invert Matrix</button>
+        </div>
+
+        <div id="transformOps" class="divSect">
+            <h2>Transformation Options</h2>
+            <div id="rotationContainer" onmouseover="showInfo(id)">
+                <label for="rotationSlider">Rotation:</label>
+                <input type="range" min="0" max="360" value="0" id="rotationSlider" oninput="updateRotation()">
+                <p id="rotationVal">0°</p>
+            </div>
+            <div id="relfection" onmouseover="showInfo(id)">
+                <input type="radio" id="reflectX" name="reflectionAxis" value="x" onchange="updateReflection(1)">Reflect across X-axis <br>
+                <input type="radio" id="reflectY" name="reflectionAxis" value="y" onchange="updateReflection(2)">Reflect across Y-axis <br>
+                <input type="radio" name="reflectionAxis" onchange="updateReflection(0)">No Reflection
+            </div><br>
+            <div id="scaler" onmouseover="showInfo(id)">
+                <label for="scaler">Scale Matrix:</label>
+                <label for="scaleX">X:</label>
+                <input type="number" value="1" id="scaleX" oninput="scaleMatrix()">
+                <label for="scaleY">Y:</label>
+                <input type="number" value="1" id="scaleY" oninput="scaleMatrix()">
+            </div>
+            <p> Hover over the Transformation Options to learn more about them. </p>
+        </div>
+    </div>
+
+    <div id="visualizationContainer">
+        <div id="canvas" class="divSect">
+            <h2>Your Matrix: Visualized</h2>
+            <canvas id="visualizationCanvas" width="400" height="400"></canvas>
+            <p>Change the Colour of your Art!</p>
+            <input type="range" min="0" max="300" value="0" id="colorSlider" oninput="updateColor()">
+        </div>
+        <div id="aboutContainer" class="divSect">
+            <h2 id="about"> About this Project</h2>
+            <p> The aim of this project is to use a creative and unconventional visual representation of matrices to illustrate the effects of various Matrix Transformations, and to allow the user to create art through Mathematics.</p>
+            <p> Created by Raif Costello</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
