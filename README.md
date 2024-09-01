@@ -1,3 +1,3 @@
-Matrix Mosaics, orignally a small project designed for my Linear Algebra Module at UoG, is a simple HTML Page (with accompanying script and styling) that uses grids of coloured squares to demonstrate the effects different Matrix Operations have on a Matrix. 
+Matrix Mosaics, orignally a small project designed for a Linear Algebra Module at UoG, is a simple HTML Page (with accompanying script and styling) that uses grids of coloured squares to demonstrate the effects different Matrix Operations have on a Matrix. 
 
 Create Matrices of any size between 1x1 to 10x10, for one hundred different size combinations. Watch your Art change in realtime as you play with your creations with Matrix Operations, including Inversion, Rotation, and Scaling, Learn more about Matrices with provided definitons, explainations, and examples, all while you can create over 90 Million different possible Mosaic creations!
